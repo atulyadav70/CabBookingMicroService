@@ -35,8 +35,8 @@ public class UserServiceImp implements UserService {
     public UserRegistrationDto registerUser(UserRegistrationDto userRegistrationDto) {
         User user = modelMapper.map(userRegistrationDto, User.class);
         String email = userRegistrationDto.getEmail();
-        String body = "Dear " + userRegistrationDto.getFirstName() +" Bhosdike " + ",\n\n" + // Add the username here
-                "Thank you for registering with us! Apni Ma n Chudayi Please.\n\n" +
+        String body = "Dear " + userRegistrationDto.getFirstName() + ",\n\n" + // Add the username here
+                "Thank you for registering with us!\n\n" +
                 "Here are your registration details:\n" +
                 "Username: " + userRegistrationDto.getFirstName() + "\n" + // Example: include username again
                 "Email: " + userRegistrationDto.getEmail() + "\n\n" + // Example: include email
